@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "architectui-angular-free": {
+    "architectui-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/architectui-angular-free",
+            "outputPath": "dist/architectui-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "architectui-angular-free:build"
+            "browserTarget": "architectui-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "architectui-angular-free:build:production"
+              "browserTarget": "architectui-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "architectui-angular-free:build"
+            "browserTarget": "architectui-angular:build"
           }
         },
         "test": {
@@ -113,7 +113,7 @@
         }
       }
     },
-    "architectui-angular-free-e2e": {
+    "architectui-angular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -122,11 +122,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "architectui-angular-free:serve"
+            "devServerTarget": "architectui-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "architectui-angular-free:serve:production"
+              "devServerTarget": "architectui-angular:serve:production"
             }
           }
         },
@@ -142,5 +142,5 @@
       }
     }
   },
-  "defaultProject": "architectui-angular-free"
+  "defaultProject": "architectui-angular"
 }
